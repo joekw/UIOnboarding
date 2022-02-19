@@ -24,7 +24,7 @@ final class UIOnboardingTitle: UILabel {
     private func configure() {
         numberOfLines = 2
         lineBreakMode = .byWordWrapping
-        font = .systemFont(ofSize: UIScreenType.isiPhoneSE || UIScreenType.isiPhone6s ? 41 : 44, weight: .heavy)
+       // font = .systemFont(ofSize: UIScreenType.isiPhoneSE || UIScreenType.isiPhone6s ? 41 : 44, weight: .heavy)
         
         accessibilityHint = "Headline"
         accessibilityTraits = .staticText
