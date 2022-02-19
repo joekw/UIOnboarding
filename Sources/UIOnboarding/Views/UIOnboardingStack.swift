@@ -74,8 +74,8 @@ final class UIOnboardingStack: UIStackView {
     }
     
     func animate(completion: (() -> Void)?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.834) {
-            UIView.animate(withDuration: 0.666, delay: 0.0, options: .curveEaseInOut, animations: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            UIView.animate(withDuration: 0.333, delay: 0.0, options: .curveEaseInOut, animations: {
                 self.onboardingIcon.isHidden = true
                 self.onboardingIcon.alpha = 0
                 self.spacerView.isHidden = true
@@ -86,7 +86,7 @@ final class UIOnboardingStack: UIStackView {
                 self.spacerView.isHidden = true
                 self.featuresList.alpha = 1
                 self.featuresList.reloadData()
-                UIView.animate(withDuration: 0.666) {
+                UIView.animate(withDuration: 0.33) {
                     if let completion = completion {
                         completion()
                     }
