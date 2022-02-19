@@ -150,7 +150,7 @@ extension UIOnboardingViewController {
     }
     
     func startOnboardingAnimation() {
-        UIView.animate(withDuration: UIAccessibility.isReduceMotionEnabled ? 0.8 : 1.533, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.6, options: .curveEaseInOut) {
+        UIView.animate(withDuration: UIAccessibility.isReduceMotionEnabled ? 0.3 : 0.8, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.6, options: .curveEaseInOut) {
             self.onboardingStackView.transform = .identity
             self.onboardingStackView.alpha = 1
         } completion: { (_) in
