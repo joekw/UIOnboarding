@@ -135,7 +135,8 @@ extension UIOnboardingViewController {
     }
     
     func setUpOnboardingTextView() {
-        onboardingTextView = .init(withConfiguration: configuration.textViewConfiguration)
+        guard let textConfiguration = configuration.textViewConfiguration else { return }
+        onboardingTextView = .init(withConfiguration: textConfiguration)
         bottomOverlayView.addSubview(onboardingTextView)
         
         onboardingTextView.bottomAnchor.constraint(equalTo: continueButton.topAnchor).isActive = true
