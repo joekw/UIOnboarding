@@ -19,6 +19,10 @@ final class UIOnboardingButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+
+        if #available(iOS 15.0, *) {
+            self.preferredBehavioralStyle = .pad
+        }
     }
         
     required init?(coder: NSCoder) {

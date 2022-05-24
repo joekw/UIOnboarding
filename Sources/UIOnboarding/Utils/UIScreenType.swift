@@ -27,11 +27,15 @@ struct UIScreenType {
         }
     }
     
-    static func setUpTopSpacing() -> CGFloat {
+    static func setUpTopSpacing(presentationStyle: UIModalPresentationStyle) -> CGFloat {
         if UIScreenType.isiPhoneSE || UIScreenType.isiPhone6s || UIScreenType.isiPhone6sPlus {
             return 70
         } else {
-            return 120
+            #if targetEnvironment(macCatalyst)
+            return 35
+            #else
+            return presentationStyle == .fullScreen ? 120 : 20
+            #endif
         }
     }
     
